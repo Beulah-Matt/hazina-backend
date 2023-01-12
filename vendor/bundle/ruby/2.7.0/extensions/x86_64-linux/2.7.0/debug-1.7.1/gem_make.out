@@ -1,0 +1,16 @@
+current directory: /home/beulah/Development/code/phase5/hazina-backend/vendor/bundle/ruby/2.7.0/gems/debug-1.7.1/ext/debug
+/home/beulah/.rbenv/versions/2.7.0/bin/ruby -I /home/beulah/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20230112-14914-1bj1ii3.rb extconf.rb
+creating Makefile
+
+current directory: /home/beulah/Development/code/phase5/hazina-backend/vendor/bundle/ruby/2.7.0/gems/debug-1.7.1/ext/debug
+make "DESTDIR=" clean
+
+current directory: /home/beulah/Development/code/phase5/hazina-backend/vendor/bundle/ruby/2.7.0/gems/debug-1.7.1/ext/debug
+make "DESTDIR="
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/beulah/Development/code/phase5/hazina-backend/vendor/bundle/ruby/2.7.0/gems/debug-1.7.1/ext/debug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20230112-14914-12y1w9w/debug
