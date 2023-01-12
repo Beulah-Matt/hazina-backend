@@ -1,5 +1,5 @@
 class StorageUnitsController < ApplicationController
     def index
-        render json: DeliveryService.all
+        render json: StorageUnit.all
     end
 end
