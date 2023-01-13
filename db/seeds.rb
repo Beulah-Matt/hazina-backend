@@ -23,7 +23,7 @@ customer5 = Customer.create(name: "Robert", email: "roba@gmail", location: "Juja
 
 admin1 = Admin.create(name: "Dennid", email: "d@gmail.com", password: "fhfg", password_confirmation: "fhfg" )
 admin2 = Admin.create(name: "Sue", email: "sue@gmail.com", password: "89uix", password_confirmation: "98uix" )
-admin3 m  = Admin.create(name: "ken", email: "ken@gmail.com", password: "mnot", password_confirmation: "mnot" )
+admin3 = Admin.create(name: "ken", email: "ken@gmail.com", password: "mnot", password_confirmation: "mnot" )
 
 
 
