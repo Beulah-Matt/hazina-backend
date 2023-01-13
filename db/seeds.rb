@@ -47,14 +47,27 @@ start_date: " " , end_date: " ", photo_url: "https://images.unsplash.com/photo-1
 storage_unit9 = StorageUnit.create(customer_id: "", admin_id: admin1.id, storage_type: "General Storage", rental_rate: 1000, size: "small", availability: "true",
 start_date: " " , end_date: " ", photo_url: "https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bG9ja2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", location: "Nyali")
 
-storage_unit10 = StorageUnit.create(customer_id: customer1.id, admin_id: admin1.id, storage_type: "General Storage", rental_rate: 2300, size: "small", availability: "true",
+storage_unit10 = StorageUnit.create(customer_id: customer1.id, admin_id: admin1.id, storage_type: "General Storage", rental_rate: 2300, size: "Medium", availability: "true",
 start_date: " " , end_date: " ", photo_url: "https://images.unsplash.com/photo-1532635042-a6f6ad4745f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fHdhcmVob3VzZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", location: "Nyali")
 
-storage_unit12 = StorageUnit.create(customer_id: customer1.id, admin_id: admin1.id, storage_type: "General Storage", rental_rate: 5000, size: "small", availability: "true",
+storage_unit12 = StorageUnit.create(customer_id: customer1.id, admin_id: admin1.id, storage_type: "General Storage", rental_rate: 5000, size: "Large", availability: "true",
 start_date: " " , end_date: " ", photo_url: "https://images.unsplash.com/photo-1629810226180-5d31f306f717?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGxvY2tlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60", location: "Nyali")
 
-storage_unit11 = StorageUnit.create(customer_id: customer1.id, admin_id: admin1.id, storage_type: "General Storage", rental_rate: 24000, size: "small", availability: "true",
+storage_unit11 = StorageUnit.create(customer_id: customer1.id, admin_id: admin1.id, storage_type: "General Storage", rental_rate: 24000, size: "Warehouse", availability: "true",
 start_date: " " , end_date: " ", photo_url: "https://images.unsplash.com/photo-1609984354032-8ad3b2c3e0d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGxvY2tlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60", location: "Nyali")
+
+
+storage_unit9 = StorageUnit.create(customer_id: "", admin_id: admin1.id, storage_type: "General Storage", rental_rate: 1000, size: "Small", availability: "true",
+start_date: " " , end_date: " ", photo_url: "https://images.unsplash.com/photo-1638780506095-3d61a4f0edd6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHN0b3JhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60", location: "Westlands")
+
+storage_unit10 = StorageUnit.create(customer_id: "", admin_id: admin1.id, storage_type: "General Storage", rental_rate: 2300, size: "Medium", availability: "true",
+start_date: " " , end_date: " ", photo_url: "ttps://images.unsplash.com/photo-1606040879707-0629f60767aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bG9ja2Vyc3xlbnwwfHwwfhHw%3D&auto=format&fit=crop&w=500&q=60", location: "Westlands")
+
+storage_unit12 = StorageUnit.create(customer_id: "", admin_id: admin1.id, storage_type: "General Storage", rental_rate: 5000, size: "Large", availability: "true",
+start_date: " " , end_date: " ", photo_url: "https://images.unsplash.com/photo-1551313158-73d016a829ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3RvcmFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", location: "Westlands")
+
+storage_unit11 = StorageUnit.create(customer_id: "", admin_id: admin1.id, storage_type: "General Storage", rental_rate: 24000, size: "Warehouse", availability: "true",
+start_date: " " , end_date: " ", photo_url: "https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3RvcmFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", location: "Westlands")
 
 
 
