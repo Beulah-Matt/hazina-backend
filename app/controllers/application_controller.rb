@@ -8,14 +8,12 @@ class ApplicationController < ActionController::API
     end
 
     def auth_header
-    # { Authorization: 'Bearer <token>' }
     request.headers['Authorization']
     end
 
     def decoded_token
         if auth_header
             token = auth_header.split(' ')[1]
-            # header: { 'Authorization': 'Bearer <token>' }
             begin
                 JWT.decode(token, 'my_s3cr3t', true, algorithm: 'HS256')
             rescue JWT::DecodeError
@@ -31,6 +29,17 @@ class ApplicationController < ActionController::API
         end
     end
 
+    def current_admin
+        if decoded_token
+            admin_id = decoded_token[0]['admin_id']
+            admin = Admin.find_by(id: admin_id)
+        end
+    end
+
+    def admin_logged_in
+        !!current_admin
+    end
+    
     def logged_in?
         !!current_customer
     end
