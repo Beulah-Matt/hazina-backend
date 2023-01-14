@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.0"
 
+gem 'byebug', '~> 9.0', '>= 9.0.6'
+
 gem 'rack-cors', :require => 'rack/cors'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
