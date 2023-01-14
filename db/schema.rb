@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_13_090420) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_13_213257) do
   create_table "admins", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -48,8 +48,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_13_090420) do
     t.string "size"
     t.integer "admin_id"
     t.integer "customer_id"
-    t.integer "start_date"
-    t.integer "end_date"
+    t.date "start_date"
+    t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "location"
