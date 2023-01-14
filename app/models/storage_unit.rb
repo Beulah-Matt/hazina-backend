@@ -1,5 +1,5 @@
 class StorageUnit < ApplicationRecord
-    belongs_to :customer
     belongs_to :admin
-    has_many :delivery_services, dependent: :destroy
+    has_many :customer_storages, dependent: :destroy
+    has_many :customers, through: :customer_storages
 end
