@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_14_061212) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_14_114544) do
   create_table "admins", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -27,6 +27,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_14_061212) do
     t.integer "days"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "start_date"
+    t.date "end_date"
     t.index ["customer_id"], name: "index_customer_storages_on_customer_id"
     t.index ["storage_unit_id"], name: "index_customer_storages_on_storage_unit_id"
   end
@@ -59,8 +61,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_14_061212) do
     t.integer "rental_rate"
     t.string "size"
     t.integer "admin_id"
-    t.date "start_date"
-    t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "location"
