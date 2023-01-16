@@ -12,4 +12,9 @@ Rails.application.routes.draw do
   post "/login", to: "auth#create"
   delete "/logout", to: "auth#destroy"
   get "/me", to: "customers#show"
+
+  #admin routes
+  get "/admin", to: "admins#show"
+  post "/admin_login", to: "admins#authenticate"
+  post "/admin_signup", to: "admins#create"
 end

@@ -1,10 +1,13 @@
 class StorageUnitsController < ApplicationController
-    rescue_from ActiveRecord::RecordNotFound, with: :record_not_found_method
+    rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
     #before_action :authorized
 
     def index
-        #change index action to allow for authenticated users only
         render json: StorageUnit.all
+    end
+
+    def show
+        render json: StorageUnit.find(params[:id])
     end
 
     # def available
