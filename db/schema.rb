@@ -10,13 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_12_104821) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_14_114544) do
   create_table "admins", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "customer_storages", force: :cascade do |t|
+    t.integer "customer_id", null: false
+    t.integer "storage_unit_id", null: false
+    t.integer "count"
+    t.integer "total_cost"
+    t.integer "days"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date "start_date"
+    t.date "end_date"
+    t.index ["customer_id"], name: "index_customer_storages_on_customer_id"
+    t.index ["storage_unit_id"], name: "index_customer_storages_on_storage_unit_id"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -47,12 +61,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_12_104821) do
     t.integer "rental_rate"
     t.string "size"
     t.integer "admin_id"
-    t.integer "customer_id"
-    t.integer "start_date"
-    t.integer "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "location"
+    t.string "photo_url"
   end
 
+  add_foreign_key "customer_storages", "customers"
+  add_foreign_key "customer_storages", "storage_units"
 end

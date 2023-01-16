@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :customer_storages
   resources :storage_units
   resources :delivery_services
   resources :admins
@@ -7,4 +8,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  post "/signup", to: "customers#create"
+  post "/login", to: "auth#create"
+  delete "/logout", to: "auth#destroy"
+  get "/me", to: "customers#show"
 end

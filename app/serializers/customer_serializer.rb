@@ -1,5 +1,5 @@
 class CustomerSerializer < ActiveModel::Serializer
-  attributes :id, :email, :password_digest, :phone_number, :photo_url, :location, :name
-  has_many :storage_units
-  # has_many :delivery_services, through: :storage_units
+  attributes :id, :name, :email, :phone_number, :photo_url, :location
+  has_many :customer_storages
+  has_many :delivery_services
 end

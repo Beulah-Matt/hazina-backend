@@ -1,6 +1,5 @@
 class StorageUnitSerializer < ActiveModel::Serializer
-  attributes :id, :customer_id, :storage_type, :rental_rate, :size, :admin_id, :start_date, :end_date, :location, :availability
-   belongs_to :customer
+  attributes :id, :storage_type, :rental_rate, :size, :admin_id, :location, :availability
    belongs_to :admin
-   has_many :delivery_services
+   #has_many :delivery_services
 end
