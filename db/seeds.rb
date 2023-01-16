@@ -6,19 +6,25 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+
 Customer.destroy_all
 StorageUnit.destroy_all
 DeliveryService.destroy_all
 Admin.destroy_all
 
-
 puts "seeding customers"
-customer1 = Customer.create(name: "Yego", email: "yg@gmail", location: "kasarani", phone_number: 123, photo_url: "rttt", password: "fh23", password_confirmation: "fh23")
-customer2 = Customer.create(name: "London", email: "london@gmail.com", password: "london123", phone_number: 789987654, photo_url: "https://images.squarespace-cdn.com/content/v1/5e0f21b80d7a60259e9a7f32/1594726056343-PWN73FZTHEP4YUZHEQ2R/char_15-01.jpg?format=500w", location: "Langata")
+customer1 = Customer.create(name: "Yego", email: "yego@gmail", location: "kasarani", phone_number: 790567345, photo_url: "https://images.squarespace-cdn.com/content/v1/5e0f21b80d7a60259e9a7f32/1594726289384-M7LBW1LOOVGF287P03Z8/char_17-01.jpg?format=300w", password: "fh23", password_confirmation: "fh23")
+customer2 = Customer.create(name: "Kelvin", email: "kelvin@gmail", location: "Rongai", phone_number: +2457056390, photo_url: "https://images.squarespace-cdn.com/content/v1/5e0f21b80d7a60259e9a7f32/1594725893138-S18LM3I9UW75FH97ZA64/char_7-01.jpg?format=300w", password: "fh23", password_confirmation: "fh23")
+customer3 = Customer.create(name: "Dennis", email: "denis@gmail", location: "kasarani", phone_number: 7673345768, photo_url: "https://images.squarespace-cdn.com/content/v1/5e0f21b80d7a60259e9a7f32/1594726608657-J4S71OYNLJ59NHCMXF4U/char_23-01.jpg?format=300w", password: "xysd", password_confirmation: "xysd")
+customer4 = Customer.create(name: "Beulah", email: "beulah@gmail", location: "Thika", phone_number: 789734123, photo_url: "https://images.squarespace-cdn.com/content/v1/5e0f21b80d7a60259e9a7f32/1594727098672-XJQOTZ1CYPBT63389M44/char_35-01.jpg?format=300w", password: "wrsd", password_confirmation: "wrsd")
+customer5 = Customer.create(name: "Robert", email: "roba@gmail", location: "Juja", phone_number: 754236780, photo_url: "https://images.squarespace-cdn.com/content/v1/5e0f21b80d7a60259e9a7f32/1594725915563-T8RQ7QD2K7DWW2MDPFP8/char_8-01.jpg?format=300w", password: "123we", password_confirmation: "123we")
+customer6 = Customer.create(name: "London", email: "london@gmail.com", password: "london123", phone_number: 789987654, photo_url: "https://images.squarespace-cdn.com/content/v1/5e0f21b80d7a60259e9a7f32/1594726056343-PWN73FZTHEP4YUZHEQ2R/char_15-01.jpg?format=500w", location: "Langata")
 
 
 puts "seeding admins"
-admin1 = Admin.create(name: "Dennid", email: "d@gmail", password: "fhfg", password_confirmation: "fhfg" )
+admin1 = Admin.create(name: "Dennis", email: "d@gmail.com", password: "fhfg", password_confirmation: "fhfg" )
+admin2 = Admin.create(name: "Sue", email: "sue@gmail.com", password: "89uix", password_confirmation: "98uix" )
+admin3 = Admin.create(name: "ken", email: "ken@gmail.com", password: "mnot", password_confirmation: "mnot" )
 
 ##Storage Units
 puts "seeding storage..."
@@ -74,7 +80,6 @@ start_date: " " , end_date: " ", photo_url: "https://images.unsplash.com/photo-1
 
 storage_unit16 = StorageUnit.create( admin_id: admin1.id, storage_type: "General Storage", rental_rate: 24000, size: "Warehouse", availability: "true",
 start_date: " " , end_date: " ", photo_url: "https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3RvcmFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", location: "Westlands")
-
 
 
 delivery_services1 = DeliveryService.create(customer_id: customer1.id, availability: "true", storage_unit_id: storage_unit1.id, delivery_type: "track", location: "Nairobi", rate: 2000)
