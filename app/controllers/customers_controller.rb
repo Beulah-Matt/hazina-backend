@@ -21,6 +21,20 @@ class CustomersController < ApplicationController
         render json: customer
     end
 
+    def update
+        customer_id = decoded_token[0]['customer_id']
+        customer = Customer.find(customer_id)
+        customer.update!(customer_params)
+        render json: customer, status: :accepted
+    end
+
+    def destroy
+        customer_id = decoded_token[0]['customer_id']
+        customer = Customer.find(customer_id)
+        customer.destroy
+        head :no_content
+    end
+
     private
 
     def customer_params
