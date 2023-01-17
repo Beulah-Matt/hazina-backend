@@ -33,11 +33,11 @@ puts "seeding storage..."
 
 storage_unit1 = StorageUnit.create(admin_id: admin1.id, storage_type: "Cold Room", rental_rate: 1000, size: "small", availability: "true",
 
-    photo_url: "https://plus.unsplash.com/premium_photo-1663047375014-7a59b88c6f37?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y29sZCUyMHN0b3JhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60", location: "Westlands")
+    photo_url: "https://i.postimg.cc/sXjB2rw2/photo1.jpg", location: "Westlands")
 
 storage_unit2 = StorageUnit.create(admin_id: admin1.id, storage_type: "Cold Room", rental_rate: 2300, size: "Medium", availability: "true",
 
-    photo_url: "https://plus.unsplash.com/premium_photo-1663047788002-765d78050d53?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbGQlMjBzdG9yYWdlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", location: "Westlands")
+    photo_url: "https://i.postimg.cc/MpwtYcG3/photo2.jpg", location: "Westlands")
 
 storage_unit3 = StorageUnit.create(admin_id: admin1.id, storage_type: "Cold Room", rental_rate: 5000, size: "Large", availability: "true",
 
@@ -49,11 +49,11 @@ storage_unit4 = StorageUnit.create(admin_id: admin1.id, storage_type: "Cold Room
 
 storage_unit5 = StorageUnit.create(admin_id: admin1.id, storage_type: "Cold Room", rental_rate: 1000, size: "small", availability: "true",
 
-    photo_url: "https://images.unsplash.com/photo-1606040879707-0629f60767aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bG9ja2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", location: "Nyali")
+    photo_url: "https://i.postimg.cc/sXjB2rw2/photo1.jpg", location: "Nyali")
 
 storage_unit6 = StorageUnit.create(admin_id: admin1.id, storage_type: "Cold Room", rental_rate: 2300, size: "Medium", availability: "true",
 
-    photo_url: "https://plus.unsplash.com/premium_photo-1663047788002-765d78050d53?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbGQlMjBzdG9yYWdlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", location: "Nyali")
+    photo_url: "https://i.postimg.cc/MpwtYcG3/photo2.jpg", location: "Nyali")
 
 storage_unit7 = StorageUnit.create(admin_id: admin1.id, storage_type: "Cold Room", rental_rate: 5000, size: "Large", availability: "true",
 
