@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :customer_storages
-  resources :storage_units
-  resources :delivery_services
+  resources :storage_units, only:[:index, :show]
+  resources :delivery_services, only:[:index, :show]
   resources :admins
   resources :customers
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

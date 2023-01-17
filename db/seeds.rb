@@ -97,4 +97,4 @@ storage_unit16 = StorageUnit.create( admin_id: admin1.id, storage_type: "General
     photo_url: "https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3RvcmFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", location: "Westlands")
 
 
-delivery_services1 = DeliveryService.create(customer_id: customer1.id, availability: "true", storage_unit_id: storage_unit1.id, delivery_type: "track", location: "Nairobi", rate: 2000)
+delivery_services1 = DeliveryService.create(customer_id: customer1.id, availability: "true",  delivery_type: "track", location: "Nairobi", rate: 2000)
