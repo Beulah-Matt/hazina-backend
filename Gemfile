@@ -9,6 +9,8 @@ gem 'rack-cors', :require => 'rack/cors'
 
 gem 'pg'
 
+gem 'rake'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
