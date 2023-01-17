@@ -7,6 +7,8 @@ gem 'byebug', '~> 9.0', '>= 9.0.6'
 
 gem 'rack-cors', :require => 'rack/cors'
 
+gem 'pg'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
