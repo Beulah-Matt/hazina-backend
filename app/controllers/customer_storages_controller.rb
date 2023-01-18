@@ -23,17 +23,17 @@ class CustomerStoragesController < ApplicationController
         render json: customer_storage, status: :accepted
     end
 
-    # def update
-    #     customer_id = decoded_token[0]['customer_id']
-    #     customer_storage = CustomerStorage.find_by!(id: params[id], customer_id: customer_id)
-    #     storage_unit = StorageUnit.find(params[:storage_unit_id])
-    #     storage_cost = storage_unit.rental_rate
-    #     rental_start = params[:start_date].gsub(", ", "/").to_date
-    #     rental_end = params[:end_date].gsub(", ", "/").to_date 
-    #     days_selected = Integer(rental_end - rental_start)
-    #     total_amount = storage_cost.to_i * params[:count].to_i * days_selected.to_i
-    #     customer_storage.update!(count: params[:count], start_date: rental_start, end_date: rental_end, days: days_selected, total_cost: total_amount)
-    # end
+    def update
+        customer_id = decoded_token[0]['customer_id']
+        customer_storage = CustomerStorage.find_by!(id: params[id], customer_id: customer_id)
+        storage_unit = StorageUnit.find(params[:storage_unit_id])
+        storage_cost = storage_unit.rental_rate
+        rental_start = params[:start_date].gsub(", ", "/").to_date
+        rental_end = params[:end_date].gsub(", ", "/").to_date 
+        days_selected = Integer(rental_end - rental_start)
+        total_amount = storage_cost.to_i * params[:count].to_i * days_selected.to_i
+        customer_storage.update!(count: params[:count], start_date: rental_start, end_date: rental_end, days: days_selected, total_cost: total_amount)
+    end
 
     private
     def record_not_found

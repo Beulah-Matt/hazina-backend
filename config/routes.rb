@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   get "/admin", to: "admins#show"
   post "/admin_login", to: "admins#authenticate"
   post "/admin_signup", to: "admins#create"
+
+  #custom routes
+  get "/locations", to: "storage_units#store_locations"
 end

@@ -11,9 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_01_17_141201) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "admins", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -23,15 +20,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_17_141201) do
   end
 
   create_table "customer_storages", force: :cascade do |t|
+    t.integer "customer_id"
+    t.integer "storage_unit_id"
     t.integer "count"
     t.integer "total_cost"
     t.integer "days"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date "start_date"
-    t.date "end_date"
-    t.integer "customer_id"
-    t.integer "storage_unit_id"
+    t.string "start_date"
+    t.string "end_date"
   end
 
   create_table "customers", force: :cascade do |t|
