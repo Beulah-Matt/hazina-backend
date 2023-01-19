@@ -35,6 +35,13 @@ class CustomerStoragesController < ApplicationController
         customer_storage.update!(count: params[:count], start_date: rental_start, end_date: rental_end, days: days_selected, total_cost: total_amount)
     end
 
+    def destroy
+        customer_id = decoded_token[0]['customer_id']
+        customer_storage = CustomerStorage.find_by!(id: params[id], customer_id: customer_id)
+        storage_unit = customer_storage.storage_unit
+        customer_storage.destroy
+    end
+
     private
     def record_not_found
         render json: { error: "Storage Unit Not Found" }, status: :not_found
