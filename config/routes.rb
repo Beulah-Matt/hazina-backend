@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :customer_storages
-  resources :storage_units, only:[:index, :show]
+  resources :storage_units
   resources :delivery_services, only:[:index, :show]
   resources :admins
   resources :customers
@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   post "/admin_signup", to: "admins#create"
 
   #custom routes
-  get "/locations", to: "storage_units#store_locations"
+  #get "/locations", to: "storage_units#store_locations"
 end
