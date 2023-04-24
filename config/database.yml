@@ -1,15 +1,9 @@
-
-
-# SQLite. Versions 3.8.0 and up are supported.
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem "sqlite3"
-#
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
 
 development:
   <<: *default
@@ -23,4 +17,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  url: <%= ENV["DATABASE_URL"]%>
+  <<: *default
+  database: hazinabackend_production
+  username: hazinabackend
+  password: <%= ENV['HAZINABACKEND_DATABASE_PASSWORD'] %>
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
